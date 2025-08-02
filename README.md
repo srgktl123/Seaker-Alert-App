@@ -61,8 +61,8 @@ You can also lower thresholds temporarily in alert rules to trigger them.
 > Includes RAM %, Disk %, CPU %, and uptime panels with alert indicators.
 
 ### ✅ Live Preview / Demo
-
-> run locally at: `http://localhost:3000` (after setup)
+🔗 [Grafana Snapshot (Static)](http://localhost:3000/dashboard/snapshot/LMdBCPzzlIuylTg89YntP6RwV9NK4z1R)
+> or run locally at: `http://localhost:3000` (after setup)
 
 ---
 
