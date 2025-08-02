@@ -119,7 +119,7 @@ python collector/main.py
 docker-compose up --build
 ```
 
-> Includes InfluxDB, Grafana, and your collector script in isolated containers
+> Includes InfluxDB, Grafana, and collector script in isolated containers
 
 ---
 
