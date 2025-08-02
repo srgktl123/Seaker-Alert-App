@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  influxdb:
+    image: influxdb:1.11
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb-data:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=system_metrics
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    depends_on:
+      - influxdb
+
+  collector:
+    build:
+      context: ./collector
+    depends_on:
+      - influxdb
+
+volumes:
+  influxdb-data:
+  grafana-storage:
